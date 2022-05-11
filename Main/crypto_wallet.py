@@ -71,5 +71,3 @@ def send_transaction(w3, account, to, wage):
 
     # Send the signed transactions
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
-
-print(generate_account())
