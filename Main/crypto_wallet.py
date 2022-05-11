@@ -21,7 +21,7 @@ def generate_account():
     """Create a digital wallet and Ethereum account from a mnemonic seed phrase."""
     # Fetch mnemonic from environment variable.
     mnemonic = os.getenv("MNEMONIC")
-
+    
     # Create Wallet Object
     wallet = Wallet(mnemonic)
 
@@ -71,3 +71,5 @@ def send_transaction(w3, account, to, wage):
 
     # Send the signed transactions
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
+
+print(generate_account())
